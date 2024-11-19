@@ -1,0 +1,52 @@
+(yolov8) studio-lab-user@default:~$ yolo val model="runs/detect/yolov8n_cv_traffic_sign_detection/weights/best.pt" data=dataset_test.yaml batch=16 imgsz=640
+Ultralytics YOLOv8.2.13 🚀 Python-3.8.19 torch-2.3.0+cu121 CUDA:0 (Tesla T4, 14918MiB)
+Model summary (fused): 168 layers, 11131389 parameters, 0 gradients, 28.5 GFLOPs
+val: Scanning /home/studio-lab-user/datasets/datasets/test.cache... 638 images, 1 backgrounds
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100
+                   all        638        770       0.97      0.943      0.975       0.85
+           Green Light        638        110      0.959      0.861      0.929      0.644
+             Red Light        638         94      0.891      0.787      0.865      0.585
+        Speed Limit 10        638          3          1      0.869      0.995      0.764
+       Speed Limit 100        638         46      0.961          1      0.994      0.892
+       Speed Limit 110        638         21      0.979      0.952      0.978      0.911
+       Speed Limit 120        638         44      0.963          1       0.99       0.89
+        Speed Limit 20        638         46      0.959      0.957      0.979      0.904
+        Speed Limit 30        638         60      0.976       0.95      0.991      0.924
+        Speed Limit 40        638         53      0.988          1      0.995      0.903
+        Speed Limit 50        638         50      0.967       0.96      0.976      0.903
+        Speed Limit 60        638         45      0.988      0.956      0.977      0.863
+        Speed Limit 70        638         53      0.987      0.906      0.982      0.886
+        Speed Limit 80        638         61      0.948          1      0.994      0.894
+        Speed Limit 90        638         34      0.991      0.941      0.986      0.848
+                  Stop        638         50      0.988          1      0.995      0.938
+Speed: 0.7ms preprocess, 8.3ms inference, 0.0ms loss, 1.8ms postprocess per image
+Results saved to runs/detect/val
+💡 Learn more at https://docs.ultralytics.com/modes/val
+
+---
+---
+---
+
+(yolov8) studio-lab-user@default:~$ yolo val model="runs/detect/yolov8n_cv_traffic_sign_detection/weights/best.pt" data=data.yaml batch=16 imgsz=640
+Ultralytics YOLOv8.2.13 🚀 Python-3.8.19 torch-2.3.0+cu121 CUDA:0 (Tesla T4, 14918MiB)
+Model summary (fused): 168 layers, 11131389 parameters, 0 gradients, 28.5 GFLOPs
+val: Scanning /home/studio-lab-user/datasets/datasets/test.cache... 4969 images, 4 backgrounds, 0 corrupt
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|████████
+                   all       4969       6012      0.954       0.93      0.969      0.847
+           Green Light       4969        774      0.928       0.85      0.921      0.626
+             Red Light       4969        787      0.888      0.762      0.855      0.581
+        Speed Limit 10       4969         22      0.806      0.756        0.9       0.77
+       Speed Limit 100       4969        365       0.98      0.986      0.994      0.905
+       Speed Limit 110       4969        139      0.985      0.941      0.982      0.882
+       Speed Limit 120       4969        356      0.963          1      0.995      0.905
+        Speed Limit 20       4969        387      0.948      0.977      0.992       0.91
+        Speed Limit 30       4969        468      0.963      0.937      0.987      0.917
+        Speed Limit 40       4969        343      0.974      0.974      0.992      0.897
+        Speed Limit 50       4969        404      0.977      0.968      0.992       0.89
+        Speed Limit 60       4969        422       0.99      0.952      0.978       0.89
+        Speed Limit 70       4969        449      0.991      0.953      0.987      0.903
+        Speed Limit 80       4969        440      0.972      0.984      0.988      0.886
+        Speed Limit 90       4969        240      0.955      0.908      0.978       0.79
+                  Stop       4969        416      0.991          1      0.995      0.951
+Speed: 0.3ms preprocess, 8.2ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to runs/detect/val4
